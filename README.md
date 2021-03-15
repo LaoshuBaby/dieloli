@@ -13,6 +13,17 @@ DieLoli
 每个角色都有各自的经历和成长，不断的学习和生活 \
 在这里，没有人是特殊的，也没有人可以掌控世界，玩家也不行
 
+初次启动
+----
+游戏初次启动时需要对数据进行预热处理(大约一分钟，请耐心等待)
+
+操作攻略
+----
+游戏中所有的按钮都分为被编号的数字按钮和未编号的文字按钮两种，它们都可以用鼠标点击，或直接在输入栏输入编号或文本进行交用 \
+大部分文本交互会等待玩家进行输入，此时点击鼠标左键或者键盘任意键即可 \
+所有的等待用户交互的文本，都可以通过鼠标右键一次性跳过 \
+可通过光标键盘上下键回溯之前的输入内容(上限20条)
+
 著作权信息
 ----
 此项目基于Python独立进行开发 \
@@ -24,7 +35,8 @@ DieLoli
 Repo说明
 ----
 日常开发备份在instability分支中进行,pr也请提交至此分支 \
-master分支在开发完成前作为设计展示分支使用
+master分支在开发完成前作为设计展示分支使用 \
+代码风格化通常使用black自动完成，行宽为108
 
 请求
 ----
@@ -39,11 +51,13 @@ CPU: \
 Memory: \
 在默认配置(2800个游戏角色)下，游戏占用总内存不超过250MB \
 系统: \
-本游戏兼容archlinux/steamos/chromeos/ubuntu/debian/aoscos等绝大部分支持gui的linux系操作系统，同时也可以在macos和windows7及以上操作系统中运行
+本游戏兼容archlinux/steamos/chromeos/ubuntu/debian/aoscos等绝大部分支持gui的linux系操作系统，同时也可以在macos和windows7及以上操作系统中运行 \
+配置调整: \
+可通过config.ini文件中的 random_npc_max 选项自由调整npc数量,该数量与宿舍/教师/课时等分配相关联,目前只在2800npc下进行过测试，其他数值出现兼容问题请提交反馈
 
 依赖
 ----
-python3 \
+python3.8.0
 
 建议通过::
 
@@ -53,10 +67,17 @@ python3 \
 
 字体
 ----
-本游戏界面设计依赖Sarasa Mono SC字体，若系统未安装此字体将会fullback到系统默认字体，不能保证能否达到设计效果 \
+本游戏界面设计依赖Sarasa Mono SC字体，若系统未安装此字体将会fallback到系统默认字体，不能保证能否达到设计效果 \
 字体相关配置可以通过data/FontConfig.json更改 \
 本游戏不提供Sarasa Mono SC相关字体文件 \
 请自行下载并安装:[Sarasa Mono SC](https://github.com/be5invis/Sarasa-Gothic)
+
+本地化
+----
+本项目使用gettext进行本地化设置 \
+请于 data/po 目录下创建对应语言目录 \
+切换语言请编辑config.ini中的language项 \
+协作翻译方案待定
 
 警告
 ----
@@ -64,7 +85,9 @@ python3 \
 
 联系方式
 ----
-e-mail:pokemonchw@gmail.com \
-twitter:@nekoharuyayuzu \
-telegram:[推送频道](https://t.me/die_loli) \
-企鹅群:688166358
+e-mail:admin@byayoi.org \
+twitter:@nekoharuyayuzu
+
+请我喝奶茶QwQ
+----
+请前往:[爱发电](https://afadian.net/@byayoi)
